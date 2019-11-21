@@ -1,0 +1,47 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello PhotosController!{% endblock %}
+
+{% block body %}
+
+<div class="cont">
+  <div class="page-head">
+    <h1>Vos photos</h1>
+    <p class="lead"></p><a href="https://github.com/sachinchoolur/lightGallery" class="btn btn-primary btn-lg">Ajouter votre photo</a></div>
+
+  <div class="demo-gallery">
+    <ul id="lightgallery">
+      <li data-responsive="https://sachinchoolur.github.io/lightGallery/static/img/1-375.jpg 375, https://sachinchoolur.github.io/lightGallery/static/img/1-480.jpg 480, https://sachinchoolur.github.io/lightGallery/static/img/1.jpg 800" data-src="https://sachinchoolur.github.io/lightGallery/static/img/1-1600.jpg"
+      data-sub-html="<h4>Fading Light</h4><p>Classic view from Rigwood Jetty on Coniston Water an old archive shot similar to an old post but a little later on.</p>" data-pinterest-text="Pin it" data-tweet-text="share on twitter ">
+        <a href="">
+          <img class="img-responsive" src="https://sachinchoolur.github.io/lightGallery/static/img/thumb-1.jpg">
+          <div class="demo-gallery-poster">
+            <img src="https://sachinchoolur.github.io/lightGallery/static/img/zoom.png">
+          </div>
+        </a>
+      </li>
+      <li data-responsive="https://sachinchoolur.github.io/lightGallery/static/img/2-375.jpg 375, https://sachinchoolur.github.io/lightGallery/static/img/2-480.jpg 480, https://sachinchoolur.github.io/lightGallery/static/img/2.jpg 800" data-src="https://sachinchoolur.github.io/lightGallery/static/img/2-1600.jpg"
+      data-sub-html="<h4>Bowness Bay</h4><p>A beautiful Sunrise this morning taken En-route to Keswick not one as planned but I'm extremely happy I was passing the right place at the right time....</p>" data-pinterest-text="Pin it" data-tweet-text="share on twitter ">
+        <a href="">
+          <img class="img-responsive" src="https://sachinchoolur.github.io/lightGallery/static/img/thumb-2.jpg">
+          <div class="demo-gallery-poster">
+            <img src="https://sachinchoolur.github.io/lightGallery/static/img/zoom.png">
+          </div>
+        </a>
+      </li>
+
+
+    </ul>
+    <span class="small">Click on any of the images to see lightGallery</span>
+  </div>
+</div>
+
+<script type="text/javascript">
+$(document).ready(function() {
+    $('#lightgallery').lightGallery({
+      pager: true
+    });
+  });
+</script>
+
+{% endblock %}

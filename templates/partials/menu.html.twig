@@ -1,0 +1,44 @@
+<script language="JavaScript">
+    function ChangeUrl(formulaire) {
+        if (formulaire.ListeUrl.selectedIndex != 0) {
+            var url;
+            url = formulaire.ListeUrl.options[formulaire.ListeUrl.selectedIndex].value;
+            window.open(url, '_blank');
+        }
+    }
+</script>
+
+
+<section class="main clearfix">
+    <FORM>
+        <div class="fleft">
+            <SELECT id="cd-dropdown" class="cd-select" NAME="ListeUrl" SIZE=1 onChange="ChangeUrl(this.form)">
+                <OPTION SELECTED VALUE="{{path ('home')}}">La Fabuleuse Histoire de Lou</option>
+                <option value="{{path ('conte')}}">Le Conte</option>
+                <option value="{{path ('music')}}">La Musique</option>
+                <option value="Lien 3">Les Illustrations</option>
+                <option value="{{path ('photos')}}">Vos Photos</option>
+                <option value="Lien 4">&Agrave Propos</option>
+                <option value="Lien 5">Livre d'Or</option>
+                <option value="Lien 5">Contact</option>
+
+        
+            </SELECT>
+        </div>
+    </FORM>
+</section>
+
+<hr class="mt-4">
+
+<script type="text/javascript">
+    $(function () {
+       $('#cd-dropdown').dropdown({
+            gutter: 5,
+            delay: 100,
+            random: true,
+            onOptionSelect: function (opt) {
+                window.location = opt.data('value');
+            }
+        });
+    });
+</script>
