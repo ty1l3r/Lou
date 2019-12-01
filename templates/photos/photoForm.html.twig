@@ -1,0 +1,20 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello PhotosController!{% endblock %}
+
+{% block body %}
+
+<div class="container" style="width:60%">
+
+  {{ form_start(form) }}
+   {{ form_end(form) }}
+
+</div>
+        <script>
+            $('.custom-file-input').on('change', function() { 
+   let fileName = $(this).val().split('\\').pop(); 
+   $(this).next('.custom-file-label').addClass("selected").html(fileName); 
+});
+        </script>
+
+{% endblock %}
