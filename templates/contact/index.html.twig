@@ -1,0 +1,50 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello ContactController!{% endblock %}
+
+{% block body %}
+
+ {{ form_start(form) }}
+
+ <div class="card mt-5 mb-5">
+ 
+   <div class="row mt-4">
+        <div class="col-2"></div>
+        <div class="col-4" style="color:#0072bc">
+            {{form_row(form.nom)}}
+        </div>
+        <div class="col-4" style="color:#0072bc">
+            {{form_row(form.prenom)}}
+        </div>
+        <div class="col-2"></div>
+    </div>
+
+    <div class="row">
+        <div class="col-2"></div>
+        <div class="col-8" style="color:#0072bc">
+            {{form_row(form.email)}}
+        </div>
+        <div class="col-2"></div>
+    </div>
+
+
+    <div class="row">
+        <div class="col-2"></div>
+        <div class="col-8" style="color:#0072bc">
+            {{form_row(form.message)}}
+        </div>
+        <div class="col-2"></div>
+    </div>
+
+    <div class="row mb-3">
+        <div class="col-2"></div>
+        <div class="col-8 pb-3" style="color:#0072bc; float:right"><br>
+            {{form_widget(form.Confirmer ) }}
+        </div>
+        {{ form_end(form) }}
+    </div>
+
+ </div>
+
+  
+{% endblock %}

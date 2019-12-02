@@ -1,0 +1,31 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello LivreOrController!{% endblock %}
+
+{% block body %}
+
+<div style="text-align: center;" class="col-12">
+
+  <a href="{{path ('livre_or_form')}}"><button class="btn btn-primary" type="button"> Ajoutez un
+      commentaire</button></a>
+</div>
+<hr>
+
+{% for message in messages %}
+<div class="container mt-4">
+  <div class="card border-primary mb-3" style="">
+
+    <div class="card-header">{{message.prenom}} {{message.nom}} à écrit : </div>
+
+    <div class="card-body">
+
+      <h4 class="card-title">{{message.title}}</h4>
+      <p class="card-text">{{message.comment}}}}</p>
+    </div>
+  </div>
+</div>
+{% endfor %}
+
+{% include "partials/footer.html.twig" %}
+
+{% endblock %}

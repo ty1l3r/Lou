@@ -1,9 +1,6 @@
 {% extends 'base.html.twig' %}
-
-{% block title %}Hello PhotosController!{% endblock %}
-
+{% block title %}Vos Photos{% endblock %}
 {% block body %}
-
 <div class="container-fluid">
     <div class="row" style="margin-bottom:40px;margin-top: 40px;">
         <div class="col-lg-4"></div>
@@ -11,42 +8,23 @@
     
 <a href="{{path ('photos_Form')}}"><button class="btn btn-primary"type="button"> Ajoutez vos photos</button></a>
 </div>
-
-
         <div class="col-lg-4"></div>
     </div>
     <hr />
-
     <div class="row">
         {% for albums in album %}
-
         <div class="card border-primary m-1 mb-3" style="min-width: 49%;">
-           <div class="card-header">{{albums.title}}</div>
+           <div class="card-header">{{albums.title}}
+           <div class="text-muted card-subtitle text-truncate mt-1"style="margin-left: -2px;"> <h6>{{albums.comment}}</h6></div>
+           </div>
+         
             <div class="card-body">
-                <h4 class="card-title text-truncate"><img class="rounded mx-auto d-block img-fluid ;" style="max-width:400px;max-height: 400px;"
-                    src="{{app.request.basepath}}/uploads/img/{{albums.imageName}}" alt=""></h4>
-          
-                <h6 class="text-muted card-subtitle">{{albums.comment}}</h6>
-            </div> 
-            
+                <h4 class="card-title "><img class="rounded mx-auto d-block img-fluid ;" style="max-width:400px;max-height: 400px;"
+                    src="{{app.request.basepath}}/uploads/img/{{albums.imageName}}" alt=""></h4>                        
+            </div>            
         </div>
-
-    {#     <div class="col-md-6 align-middle" style='display: flex;margin-top: auto;margin-bottom: auto;'>
-            <div class="row"></div>
-            <div class="row">
-                <p>{{albums.title}}</p>
-            </div>
-
-        </div> #}
-
-
-
-
         {% endfor %}
     </div>
-
-    {% include "partials/footer.html.twig" %}
-
 </div>
-
+    {% include "partials/footer.html.twig" %}
 {% endblock %}

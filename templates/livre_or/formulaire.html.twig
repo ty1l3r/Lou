@@ -1,0 +1,51 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello LivreOrController!{% endblock %}
+
+{% block body %}
+<div class="container-fluid">
+    {{ form_start(form) }}
+
+    <div class="row">
+        <div class="col-2"></div>
+        <div class="col-4" style="color:#0072bc">
+            {{form_row(form.nom)}}
+        </div>
+        <div class="col-4" style="color:#0072bc">
+            {{form_row(form.prenom)}}
+        </div>
+        <div class="col-2"></div>
+    </div>
+
+    <div class="row">
+        <div class="col-2"></div>
+        <div class="col-8" style="color:#0072bc">
+            {{form_row(form.mail)}}
+        </div>
+        <div class="col-2"></div>
+    </div>
+
+    <div class="row">
+        <div class="col-2"></div>
+        <div class="col-8" style="color:#0072bc">
+            {{form_row(form.title)}}
+        </div>
+        <div class="col-2"></div>
+    </div>
+
+    <div class="row">
+        <div class="col-2"></div>
+        <div class="col-8" style="color:#0072bc">
+            {{form_row(form.comment)}}
+        </div>
+        <div class="col-2"></div>
+    </div>
+
+    <div class="row">
+        <div class="col-2"></div>
+        <div class="col-8 pb-3" style="margin-left: 558px;; color:#0072bc; float:right"><br>
+            {{form_widget(form.Confirmer ) }}
+        </div>
+        {{ form_end(form) }}
+    </div>
+    {% endblock %}
