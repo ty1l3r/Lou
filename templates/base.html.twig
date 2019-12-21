@@ -10,38 +10,75 @@
  *======================================================================
  *====================================================================*/-->
 <html>
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    {% include "partials/cooki.php" %}
-    <title>{% block title %}Welcome!{% endblock %}</title>
-    {% block stylesheets %}
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		{% include "partials/cooki.php" %}
+		<title>
+			{% block title %}La Fabuleuse Histoire de Lou. Le conte du Moonlight Project !
+			{% endblock %}
+		</title>
+		<meta name="description" content="La Fabuleuse Histoire de Lou, le conte du collectif Moonlight Project. Au château de Fougère-sur-Bièvre du 21 Décembre au 6 Janvier 2010"/>
+		{% block stylesheets %}
+
+
+		    <link rel="stylesheet" href="../css/bootstrap.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,700">
+    <link rel="stylesheet" href="../../css/styles.css">
+    <link rel="stylesheet" href="../../css/menu/style2.css">
+    <link rel="stylesheet" href="../../fonts/fontawesome-all.min.css">
+    <link rel="stylesheet" href="../../fonts/fontawesome5-overrides.min.css">
+     <link rel="stylesheet" href="../../css/Lightbox-Gallery.css">
+    <link rel="stylesheet" href="../../css/footer.css">
+    <link rel="stylesheet" href="../../css/gallery.css">
     <link href="https://cdn.rawgit.com/sachinchoolur/lightgallery.js/master/dist/css/lightgallery.css" rel="stylesheet">
     <script src="../../js/modernizr.custom.63321.js"></script>
     <script src="../../js/jquery.menu.js"></script>
+    <script src="../../js/modernizr.custom.63321.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.8.2/css/lightbox.min.css">
-    <link rel="stylesheet" href=" {{ asset ('build/app.css') }}">
-    {% endblock %}
-</head>
-<body>
-    {% include "partials/menu.html.twig" %}
-    {% for label, messages in app.flashes  %}
-    <div class="container mt-5">
-        <div class="alert alert-{{ label }}">
-            {% for message in messages %}
-            <p style="text-align:center; padding-top:2%">{{ message | raw }}</p>
-            {% endfor %}
-        </div>
-    </div>
-    {% endfor %}
-    {% block body %}{% endblock %}
-    <!-- EO Body -->
-    <script src=" {{asset ('build/app.js') }} "> </script>
+
+
+			<link rel="stylesheet" href="../css/icons.css">
+		{% endblock %}
+	</head>
+	<body>
+		{% include "partials/menu.html.twig" %}
+		{% for label, messages in app.flashes  %}
+			<div class="container mt-5">
+				<div class="alert alert-{{ label }}">
+					{% for message in messages %}
+						<p style="text-align:center; padding-top:2%">{{ message | raw }}</p>
+					{% endfor %}
+				</div>
+			</div>
+		{% endfor %}
+		{% block body %}{% endblock %}
+
+
+<script src="../../js/jquery.min.js"></script>
+    <script src="../../js/bootstrap.min.js"></script>
     <script src="../../js/jquery.dropdown.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.8.2/js/lightbox.min.js"></script>
-    {% block javascripts %}{% endblock %}
-    <!-- EO JS -->
-</body>
+
+		<!-- EO Body -->
+
+	{# 	<script src="../../js/jquery.min.js"></script>
+		<script src="../../js/bootstrap.min.js"></script>
+<script src="../../js/jquery.dropdown.js"></script> #}
+
+	{# 	<script src="../../js/jquery.dropdown.js"></script>
+		<script src="../../js/gallery.js"></script>
+		<script src="../../js/jquery.gallery.js"></script>
+		<script src="../../js/jquery.min.js"></script>
+		<script src="../../js/jquery.mousewheel.min.js"></script>
+		<script src="../../js/lightbox.min.js"></script>
+		<script src="../../js/lightbox.min.js"></script>
+		<script src="../../js/modernizr.custom.63321.js"></script>
+		<script src="../../js/picturefill.min.js"></script>
+	<script type="module" src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons/ionicons.esm.js"></script> #}
+
+		{% block javascripts %}{% endblock %}
+		<!-- EO JS -->
+	</body>
 </html>

@@ -1,7 +1,8 @@
+
 .cd-dropdown,
 .cd-select {
 	position: relative;
-	width: 400px;
+	max-width: 400px;
 	display: block;
 	margin-left: auto;
 	margin-right: auto;;
