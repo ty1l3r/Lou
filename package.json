@@ -18,7 +18,7 @@
     "dependencies": {
         "dropdown": "^0.2.0",
         "i": "^0.3.6",
-        "jquery": "^3.4.1",
+        "jquery": "^3.5.0",
         "jquery-click-flyout": "0.0.10",
         "jquery-common-keydown": "^1.0.1",
         "jquery-dropdown": "^1.0.0",
